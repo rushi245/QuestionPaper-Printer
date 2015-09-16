@@ -1,0 +1,7 @@
+{
+	"server"       : "54.69.228.145",
+	"port"         : "5432",
+	"databasename" : "questions",
+	"username"     : "postgres",
+	"password"     : "abcd123",
+}

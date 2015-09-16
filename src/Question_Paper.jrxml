@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-06-20T17:33:40 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Question_Paper" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4d05086-130a-4906-b961-3128c3c71095">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Questions"/>
+	<parameter name="Count" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from public."Questions" order by random() limit $P!{Count}]]>
+	</queryString>
+	<field name="question" class="java.lang.String"/>
+	<field name="option1" class="java.lang.String"/>
+	<field name="option2" class="java.lang.String"/>
+	<field name="option3" class="java.lang.String"/>
+	<field name="option4" class="java.lang.String"/>
+	<field name="answer" class="java.lang.String"/>
+	<field name="q_id" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="20" y="10" width="139" height="50" uuid="e69a3995-982b-46d1-a3d2-68c3b9908d06"/>
+				<imageExpression><![CDATA["/home/rushikesh/Jasper/quality_kiosk_logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="202" y="20" width="150" height="30" uuid="dacad925-ab43-48ff-878a-528f11efb328"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Aptitude Test]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="109" splitType="Stretch">
+			<textField>
+				<reportElement x="39" y="6" width="331" height="16" uuid="eac51791-96ac-4625-aedf-4bdda7fee9fb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{question}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="26" width="100" height="18" uuid="442c8f81-5402-4659-accf-413aeb955c59">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{option1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="44" width="100" height="18" uuid="4d01aefd-732a-48ea-8447-229b1fe8d24b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{option2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="63" width="100" height="18" uuid="691ceec3-dbe3-45fb-b21a-e497ee7a59c3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{option3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="82" width="100" height="18" uuid="5b278970-e9bf-4322-9a76-c34bd82df296">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{option4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="47" y="26" width="23" height="18" uuid="f7048477-93a2-4ea3-90c4-24641a55f72f">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[A)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="44" width="23" height="18" uuid="322b5847-bc24-49c1-ad2f-0c64ad925932">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[B)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="63" width="23" height="18" uuid="edabc182-6bed-4ef0-ae30-1a9432a2120c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[C)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="82" width="23" height="18" uuid="4cb090c5-3b4e-458e-9490-dd0a27ad7c30">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[D)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="8" y="10" width="31" height="16" uuid="5a646a23-a3f1-427d-b168-9bd30de2b3b8"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
